@@ -11,6 +11,7 @@
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
     "test:day01": "playwright test tests/day01-getting-started",
+    "test:day02": "playwright test tests/day02-locators",
     "report": "playwright show-report",
     "codegen": "playwright codegen",
     "typecheck": "tsc --noEmit"
