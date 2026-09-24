@@ -1,45 +1,33 @@
 {
-  "name": "playwright-bdd-cucumber-framework",
+  "name": "playwright-14days-challenge",
   "version": "1.0.0",
-  "description": "Playwright BDD testing framework with Cucumber and JavaScript",
-  "main": "index.js",
+  "description": "14-Day Playwright Automation Challenge from Zero to Production-Ready Framework",
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --profile chromium; npm run report:html",
-    "test:demo": "cucumber-js --require-module ts-node/register --profile chromium --tags @demo; npm run report:html",
-    "test:chromium": "cucumber-js --require-module ts-node/register --profile chromium; npm run report:html",
-    "test:firefox": "cucumber-js --require-module ts-node/register --profile firefox; npm run report:html",
-    "test:webkit": "cucumber-js --require-module ts-node/register --profile webkit; npm run report:html",
-    "test:all-browsers": "cucumber-js --require-module ts-node/register --profile chromium; cucumber-js --require-module ts-node/register --profile firefox; cucumber-js --require-module ts-node/register --profile webkit; npm run report:html",
-    "test:regression": "cucumber-js --require-module ts-node/register --profile chromium --tags @regression; npm run report:html",
-    "test:feature": "cucumber-js --require-module ts-node/register --profile chromium",
-    "test:ui": "cucumber-js --require-module ts-node/register --profile chromium --tags @ui; npm run report:html",
-    "test:ui:all-browsers": "cucumber-js --require-module ts-node/register --profile chromium --tags @ui; cucumber-js --require-module ts-node/register --profile firefox --tags @ui; cucumber-js --require-module ts-node/register --profile webkit --tags @ui; npm run report:html",
-    "test:api": "cucumber-js --require-module ts-node/register --profile chromium --tags @api; npm run report:html",
-    "test:api:all-browsers": "cucumber-js --require-module ts-node/register --profile chromium --tags @api; cucumber-js --require-module ts-node/register --profile firefox --tags @api; cucumber-js --require-module ts-node/register --profile webkit --tags @api; npm run report:html",
-    "test:performance": "cucumber-js --require-module ts-node/register --profile chromium --tags @performance; npm run report:html",
-    "report:html": "node config/report/multiple-cucumber-html-reporter.js",
-    "report:summary": "node config/report/generate-summary.js",
-    "clean": "rimraf test-results reports screenshots videos",
-    "install:browsers": "npx playwright install"
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:day01": "playwright test tests/day01-getting-started",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "playwright",
-    "cucumber",
-    "bdd",
-    "testing",
     "automation",
-    "javascript"
+    "testing",
+    "typescript",
+    "e2e"
   ],
   "author": "Ky Nguyen",
+  "license": "MIT",
   "devDependencies": {
-    "@cucumber/cucumber": "^9.6.0",
-    "@playwright/test": "^1.39.0",
-    "eslint": "^8.55.0",
-    "multiple-cucumber-html-reporter": "^3.5.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^5.1.6",
-    "ts-node": "^10.9.1",
-    "@types/node": "^20.5.1"
-  },
-  "dependencies": {}
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.1",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.2"
+  }
 }

@@ -1,58 +1,8 @@
-# Node
 node_modules/
-npm-debug.log*
-yarn-error.log*
-
-# OS files
-.DS_Store
-
-# Environment/config
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.auth/
 .env
-.env.*
-
-# Playwright/Cucumber artifacts
-playwright-report/
-test-results/
-traces/
-
-# Project reports
-reports/
-reports/**
-
-# VS Code
-.vscode/
-# Dependencies
-node_modules/
-
-# Test results and reports
-test-results/
-playwright-report/
-html-report/
-reports/
-screenshots/
-
-# Logs
-*.log
-logs/
-
-# Environment variables
-.env
-.env.local
-
-# OS generated files
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# TypeScript
-*.tsbuildinfo
-
-# Coverage
-coverage/
-
-# Temporary files
-*.tmp
-*.temp

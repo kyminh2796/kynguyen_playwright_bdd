@@ -1,7 +1,0 @@
-{
-  "environments": {
-    "testEnv": {
-      "baseUrl": "https://www.demoblaze.com/index.html"
-    }
-  }
-}
